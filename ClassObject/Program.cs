@@ -1,4 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿// ClassObject program
 using System;
 
 class Contractor
