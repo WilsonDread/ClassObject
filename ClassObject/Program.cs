@@ -3,6 +3,7 @@ using System;
 
 class Contractor
 {
+    // Get Contractor information from user 
     public string ContractorName { get; set; }
     public int ContractorNumber { get; set; }
     public DateTime StartDate { get; set; }
@@ -21,7 +22,7 @@ class Contractor
         Console.WriteLine($"Start Date: {StartDate.ToShortDateString()}");
     }
 }
-
+     // Display all subcontractors and calculate pay
 class Subcontractor : Contractor
 {
     public int Shift { get; set; } // 1 for Day, 2 for Night
@@ -33,7 +34,7 @@ class Subcontractor : Contractor
         Shift = shift;
         HourlyPayRate = payRate;
     }
-
+    // Method to calculate pay with shift differential
     public double ComputePay(double hoursWorked)
     {
         double pay = HourlyPayRate * hoursWorked;
@@ -54,6 +55,7 @@ class Subcontractor : Contractor
 
 class Program
 {
+    // Display all subcontractors and calculate pay
     static void Main()
     {
         Console.Write("Enter contractor name: ");
